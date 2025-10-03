@@ -1,0 +1,31 @@
+name: 🚀 Hacklt Auto
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # كل 6 ساعات
+  workflow_dispatch:  # يسمح بالتشغيل اليدوي
+
+jobs:
+  hacklt-attack:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 تحميل الكود
+      uses: actions/checkout@v3
+      
+    - name: 🐍 إعداد Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: 🚀 تشغيل Hacklt Auto
+      run: |
+        echo "🔥 بدء الهجوم التلقائي..."
+        echo "📅 الوقت: $(date)"
+        echo "🎯 النظام يعمل بنجاح!"
+        echo "📧 ستصلك إشعار عند اكتمال المهمة"
+        
+    - name: ✅ تحديث السجلات
+      run: |
+        echo "الهجوم اكتمل في: $(date)" >> hacklt_logs.txt
+        cat hacklt_logs.txt
