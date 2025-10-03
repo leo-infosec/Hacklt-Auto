@@ -1,0 +1,9 @@
+{
+  "target_url": "https://www.facebook.com/share/17AugC82BB/",
+  "attack_duration": "30",
+  "user_email": "drammarelhawary2@gmail.com",
+  "start_time": "2024-12-15 00:00:00",
+  "status": "active",
+  "max_reports_per_day": "50",
+  "report_types": ["impersonation", "fake_account", "harassment"]
+}
